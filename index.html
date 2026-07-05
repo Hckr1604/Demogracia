@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Passport to English · Trivia de gramática</title>
+  <meta name="description" content="Practica gramática en inglés como si fuera un pasaporte de viaje: colecciona un sello por cada tema." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+
+    <!-- ============ HOME SCREEN ============ -->
+    <section id="screen-home" class="screen">
+      <header class="home-header">
+        <span class="eyebrow">TÚ PUEDES, MI AMOR</span>
+        <h1>Passport to English</h1>
+        <p>Cada tema es un sello por coleccionar. Elige uno, responde la ronda de preguntas y séllalo en tu pasaporte.</p>
+        <a href="aprende.html" class="btn-learn-link">📖 Aprender la teoría de cada tema</a>
+        <button id="btn-reset-progress" class="btn-reset-progress" type="button">
+          🗑️ Reiniciar progreso
+        </button>
+        <div class="divider" aria-hidden="true"></div>
+      </header>
+
+      <div id="topics-grid" class="topics-grid"></div>
+    </section>
+
+    <!-- ============ QUIZ SCREEN ============ -->
+    <section id="screen-quiz" class="screen hidden">
+      <div class="quiz-topbar">
+        <button id="btn-back-home" class="btn-back" type="button">← Volver al mapa</button>
+        <h2 id="quiz-topic-title"></h2>
+        <span id="score-label">⭐ 0</span>
+      </div>
+
+      <div class="progress-wrap">
+        <div class="progress-track">
+          <div id="progress-fill" class="progress-fill"></div>
+          <span id="progress-plane" class="progress-plane">✈️</span>
+        </div>
+        <p id="progress-label"></p>
+      </div>
+
+      <div id="question-container"></div>
+      <div id="actions-row" class="actions-row"></div>
+    </section>
+
+    <!-- ============ RESULT SCREEN ============ -->
+    <section id="screen-result" class="screen hidden">
+      <div class="result-screen">
+        <div id="result-stamp" class="stamp-big">✔</div>
+        <p id="result-score"></p>
+        <span id="result-percent"></span>
+        <p id="result-message"></p>
+        <div class="result-actions">
+          <button id="btn-retry" class="btn-primary" type="button">Reintentar tema</button>
+          <button id="btn-result-home" class="btn-secondary" type="button">Volver al mapa</button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
